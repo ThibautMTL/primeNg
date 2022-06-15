@@ -12,6 +12,28 @@
       <label for="inputtext">InputText</label>
     </span>
   </section>
+  <section>
+    <h2>Calendar</h2>
+    <p-calendar [showIcon]="true" selectionMode="range" inputId="icon"></p-calendar>
+  </section>
+  <section>
+    <h2>Knob</h2>
+    <p-knob [(ngModel)]="valueKnob"></p-knob>
+  </section>
+  <section>
+    <h2>Dropdown basic</h2>
+    <p-dropdown [options]="cities" placeholder="Select a City" optionLabel="label" [showClear]="true"></p-dropdown>
+  </section>
+  <section>
+    <h2>Dropdown editable</h2>
+    <p-dropdown [options]="cities" [(ngModel)]="citySelect" [editable]="true" optionLabel="label" (onChange)="displaySelect($event.value)"></p-dropdown>
+  </section>
+  <section>
+    <h2>Dropdown filter</h2>
+    <p-dropdown [options]="cities" [(ngModel)]="citySelect" optionLabel="label" [filter]="true" filterBy="label" [showClear]="true" placeholder="Select a Country"></p-dropdown>
+  </section>
+
+
 </div>
 
 
